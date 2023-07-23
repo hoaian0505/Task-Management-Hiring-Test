@@ -1,0 +1,73 @@
+.mat-form-field{
+    display: block;
+    margin-top: 0.5rem;
+}
+
+h2{
+    margin-top: 1rem;
+
+    span{
+        color: red;
+        font-weight: bold;
+    }
+}
+
+.line-break{
+    border: 1px solid gray;
+    margin-bottom: 1rem;
+}
+
+a{
+    color:blue;
+    text-decoration:underline;
+    svg{
+        display: inherit;
+        margin-right: 5px;
+    }
+}
+
+.btn-add-task{
+    &:hover{
+        cursor: pointer;
+        background-color:  #315687;
+        color: white;
+    }
+
+    &:disabled,&[disabled]{
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+      
+        &:hover{
+          cursor:inherit;
+        }
+    }
+}
+
+.btn-done{
+    &:hover{
+        background-color: #5fbf4e;
+    }
+}
+
+.btn-remove{
+    &:hover{
+        background-color: #b33109;
+    }
+}
+
+.add-task{
+    display: flex;
+
+    .errMessage{
+        color: red;
+        margin-top: 0.5rem;
+        margin-right: 0;
+        margin-left: auto;
+    }
+}
+
+.bg-white{
+    padding-top: 0;
+    padding-bottom: 0;
+}

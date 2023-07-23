@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Edit Task</h1>
+<form #frm1="ngForm">
+  <h2>Tasks: </h2>
+  <input class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker" 
+    placeholder="Add Task"
+    name="task" [(ngModel)]="description"
+  >
+  <h2>Assigned: </h2>
+  <mat-form-field>
+    <mat-label>Users</mat-label>
+    <mat-select class="drop-down-user" [(ngModel)]="selectedUser" name="user">
+      <mat-option *ngFor="let user of users|async" [value]="user.id">
+        {{user.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button class="btn-return flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal" (click)="onNoClick()">Cancel</button>
+    <button class="btn-save flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal" [disabled]="checkInput()" (click)="onSubmit()">Save</button>
+    <p *ngIf="errMessage" class="errMessage">Please change the task description!</p>
+  </div>
+  
+</form>

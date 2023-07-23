@@ -1,0 +1,47 @@
+<div class="h-100 w-full flex items-center justify-center bg-teal-lightest font-sans">
+  <div class="bg-white rounded shadow p-6 m-4 w-full lg:w-3/4 lg:max-w-lg">
+      <div class="mb-5">
+          <form #frm1="ngForm" (ngSubmit)="addTask()">
+              <h2>Tasks: <span>*</span></h2>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker" 
+                placeholder="Add Task"
+                name="task" [(ngModel)]="task" required
+              >
+              <h2>Assigned: <span>*</span></h2>
+              <mat-form-field>
+                <mat-label>Users</mat-label>
+                <mat-select class="drop-down-user" [(ngModel)]="selectedUser" name="user">
+                  <mat-option *ngFor="let user of users|async" [value]="user.id">
+                    {{user.name}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <div class="add-task">
+                <button class="btn-add-task flex-no-shrink p-2 border-2 rounded text-teal border-teal"
+                  [disabled]="checkInput()"
+                >
+                  Add
+                </button>
+                <p *ngIf="errMessage" class="errMessage">Please fill the task description!</p>
+              </div>
+          </form>
+      </div>
+      <div class="line-break"></div> 
+      <a [routerLink]="['/detail']">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-files" viewBox="0 0 16 16">
+          <path d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z"/>
+        </svg>See more task details
+      </a>
+      <div>
+        <ul>
+          <li *ngFor="let t of tasks|async">
+            <div class="flex mb-4 items-center">
+              <p class="w-full text-grey-darkest">Task: {{t.id}}, {{t.description}}</p>
+              <!-- <button class="btn-done flex-no-shrink p-2 ml-4 mr-2 border-2 rounded hover:text-white text-green border-green" (click)="makeComplete(t.id)">Done</button> -->
+              <button class="btn-remove flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white" (click)="removeTask(t.id)">Remove</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>

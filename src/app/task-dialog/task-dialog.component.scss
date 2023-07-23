@@ -1,0 +1,36 @@
+h2{
+    margin-top: 1rem;
+}
+
+.mat-form-field{
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.btn-return{
+    margin-right: 1rem;
+    &:hover{
+        background-color: #b33109;
+    }
+}
+
+.btn-save{
+    &:hover{
+        background-color: #5fbf4e;
+    }
+
+    &:disabled,&[disabled]{
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+      
+        &:hover{
+          cursor:inherit;
+        }
+    }
+}
+
+.errMessage{
+    color: red;
+    margin-top: 0.5rem;
+}

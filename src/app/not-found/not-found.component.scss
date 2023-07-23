@@ -1,0 +1,19 @@
+div{
+    text-align: center;
+}
+
+button{
+    margin-top: 1rem;
+    background-color: #4286fc;
+    color: white;
+    padding:1rem 9rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border: #4286fc;
+
+    &:hover{
+        cursor: pointer;
+        background-color: #52b0f7;
+    }
+}
