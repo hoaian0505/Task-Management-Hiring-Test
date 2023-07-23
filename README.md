@@ -36,6 +36,20 @@ Build a task managing app, where the user can add, filter, assign, and complete 
 Please send us the link to your repo on GitHub, Gitlab, etc. Please also indicate approximately how long you spent on the submission.
 
 ## Time spent and Features
-* Time spent: 10 hours.
-* Features:
-*   a
+Time spent: 10 hours.
+Features:
+* Create banner
+* Create form to add new Task in home page
+* Create Form has validate
+* Home page can redirect to detail page to see all tasks
+* Home page only show 4 latest tasks
+* You can delete task on home page
+* Detail page show all tasks as table
+* You can Search and Sort on detail page
+* Detail page have all features to do with task: Edit, Make Done, Delete
+* When click edit on detail page, Edit Component popup show up
+* You can edit task and click Save to submit new value or Cancel to return to detail page
+* Edit form has validate
+* When redirect to wrong URL, NotFoundComponent show up with Back button, click Back button to redirect to home page
+* Create loading screen when loading
+* Use animation css for loading
