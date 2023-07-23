@@ -34,3 +34,8 @@ Build a task managing app, where the user can add, filter, assign, and complete 
 ## Submitting your solution
 
 Please send us the link to your repo on GitHub, Gitlab, etc. Please also indicate approximately how long you spent on the submission.
+
+## Time spent and Features
+* Time spent: 10 hours.
+* Features:
+*   a
